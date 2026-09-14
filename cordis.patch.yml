@@ -1,0 +1,20 @@
+# dsh-tui-exit-banner 的 bundle patch：把插件作为一行插入 profile 的插件树。
+#
+# 为什么 `name` 写包名而不是 `./xxx`：
+# bundle 的 patch 层以 **profile 目录** 为 baseUrl 解析（include root 是
+# 该 profile 的 cordis.yml），相对路径会落到 profile 目录下而不是本包内。
+# 官方 bundle（dsh-base / dsh-tui）里所有插件的 name 也都是包名。
+#
+# config 的每一项都有默认值，整个 config 段可以删掉，行为与写全时一致。
+- insert:
+    - id: dsh-tui-exit-banner
+      name: dsh-tui-exit-banner
+      config:
+        # 顶部大号字：shadow（默认，64 列实心块）| small | mini | plain | none
+        logo: shadow
+        # 是否打印 `Session <会话标题>` 一行
+        showTitle: true
+        # 是否打印 `Continue dst --resume <id>` 一行
+        showCommand: true
+        # 恢复命令用的启动器别名（默认 dst）；上游给的是底层形式，会据此规整
+        launcher: dst

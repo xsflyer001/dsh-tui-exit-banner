@@ -1,0 +1,4 @@
+# pnpm 12 用 allowBuilds 决定哪些依赖允许执行构建脚本。
+# esbuild 是 vitest 的传递依赖，必须放行，否则 pnpm install 会以非零码退出。
+allowBuilds:
+  esbuild: true

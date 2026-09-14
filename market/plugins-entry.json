@@ -1,0 +1,15 @@
+{
+  "name": "dsh-tui-exit-banner",
+  "displayName": "Exit Banner",
+  "description": "退出 dsh-TUI 时打印大号 DeepSeek 横幅：会话标题 + dst --resume <id>，空会话静默退出。",
+  "author": "xsflyer001",
+  "repo": "https://github.com/xsflyer001/dsh-tui-exit-banner",
+  "npm": "https://www.npmjs.com/package/dsh-tui-exit-banner",
+  "tags": [
+    "TUI",
+    "退出回执"
+  ],
+  "kind": "plugin",
+  "featured": false,
+  "addedAt": "2026-09-14"
+}

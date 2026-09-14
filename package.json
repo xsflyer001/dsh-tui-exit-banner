@@ -1,0 +1,69 @@
+{
+  "name": "dsh-tui-exit-banner",
+  "version": "0.1.0",
+  "description": "退出 dsh-TUI 时打印大号 DeepSeek 横幅：会话标题 + dst --resume <id>，空会话静默退出。",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "engines": {
+    "node": "^22.19 || >=24"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepublishOnly": "pnpm build && pnpm test"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-tui",
+    "deepseek",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "tui",
+    "exit-banner"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "xsflyer001",
+    "email": "xsflyer001@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xsflyer001/dsh-tui-exit-banner.git"
+  },
+  "homepage": "https://github.com/xsflyer001/dsh-tui-exit-banner#readme",
+  "bugs": {
+    "url": "https://github.com/xsflyer001/dsh-tui-exit-banner/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "^3.18.1"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.4"
+  }
+}
