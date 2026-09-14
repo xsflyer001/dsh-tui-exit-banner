@@ -1,10 +1,10 @@
 {
   "name": "dsh-tui-exit-banner",
   "displayName": "Exit Banner",
-  "description": "退出 dsh-TUI 时打印大号 DeepSeek 横幅：会话标题 + dst --resume <id>，空会话静默退出。",
+  "description": "退出 dsh-TUI 时打印大号 DeepSeek 横幅：会话标题 + 恢复命令，空会话静默退出。上游自带的提示会被 Ink 收尾输出冲掉（闪一下就没），本插件把它推迟到进程退出的最后一刻再写。安装：dsh plugin add dsh-tui-exit-banner",
   "author": "xsflyer001",
   "repo": "https://github.com/xsflyer001/dsh-tui-exit-banner",
-  "npm": "https://www.npmjs.com/package/dsh-tui-exit-banner",
+  "npm": "dsh-tui-exit-banner",
   "tags": [
     "TUI",
     "退出回执"
